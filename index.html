@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102725"><title>星筹竞逐 · 单机演示</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css"><script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar"><a href="./" class="brand">◈ 星筹竞逐</a><span class="edition">单机演示</span></header>
+  <main>
+    <div class="notice" role="note">这是单机演示：你与电脑对手同桌，操作只发生在当前浏览器。此页面不能邀请好友联机，刷新会重新开始。</div>
+    <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+    <section id="welcome">
+      <div class="intro"><span class="eyebrow">五张牌，五轮小较量</span><h1>留好王牌，<br>让每次出手<span>恰到好处。</span></h1><p>和电脑对手试一局原创数字卡牌，<br>看看你能赢下多少枚星筹。</p><div class="tags"><span>你 + 电脑</span><span>5 轮</span><span>无需登录</span></div></div>
+      <section class="panel"><h2>先认识一下玩法</h2><p>每人5张牌，每轮按顺序公开出1张。数字最大者得1分；并列时各得1分。每轮轮换先手，五轮后总分最高者获胜。</p><button id="start-demo" class="primary" type="button">开始单机演示 ↗</button></section>
+    </section>
+    <section id="room" hidden>
+      <div class="room-heading"><div><span id="room-phase" class="eyebrow"></span><h1>星筹竞逐</h1></div><span class="pill">本机运行 · 电脑陪玩</span></div>
+      <div class="game-layout"><div>
+        <section class="panel table-panel"><div class="section-heading"><h2 id="turn-title"></h2><span id="round-number" class="pill"></span></div><p id="turn-help" class="muted"></p><div id="table" class="cards public-cards"></div><p id="result" class="result" hidden></p><button id="again" class="primary" type="button" hidden>再玩一局</button></section>
+        <section class="panel hand-panel"><div class="section-heading"><h2>我的手牌</h2><span id="hand-count" class="muted"></span></div><p class="muted">轮到你时，点击一张牌即出牌，不可撤销。</p><div id="hand" class="cards hand-cards"></div></section>
+        <section id="last-round-panel" class="panel" hidden><h2 id="last-round-title"></h2><div id="last-round" class="cards public-cards"></div></section>
+      </div><aside>
+        <section class="panel"><h2>这一桌</h2><ol id="players" class="players"></ol></section>
+        <details class="panel" open><summary>怎么玩</summary><p id="rules"></p><p class="muted">首轮你先出，之后轮换先手；电脑随机选择手牌。这是本地玩法演示，所有演示数据均在浏览器中。</p></details>
+        <details class="panel"><summary>本局记录</summary><ol id="log" class="log"></ol></details>
+        <button id="home" class="text-button" type="button">回到介绍</button>
+      </aside></div>
+    </section>
+  </main>
+  <footer>星筹竞逐 · 原创卡牌演示<span>静态页面，不提供好友联机服务</span></footer>
+</body></html>
